@@ -1,0 +1,77 @@
+body {
+  background: #507b74;
+}
+
+.keyboard {
+  max-width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #aea152;
+  margin: 0 auto;
+}
+
+.keyboard__key,
+.keyboard__left-ctrl,
+.keyboard__win,
+.keyboard__left-alt,
+.keyboard__right-ctrl,
+.keyboard__right-alt,
+.keyboard__left,
+.keyboard__up,
+.keyboard__down,
+.keyboard__right {
+  width: 35px;
+  height: 30px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__backspace {
+  width: 70px;
+  height: 30px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__tab,
+.keyboard__back-slash {
+  width: 52.5px;
+  height: 30px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__caps {
+  width: 70px;
+  height: 30px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__enter {
+  width: 78.8px;
+  height: 30px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__left-shift {
+  width: 87.5px;
+  height: 30px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+.keyboard__right-shift {
+  width: 105px;
+  height: 30px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__space {
+  width: 245.5px;
+  height: 30px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
