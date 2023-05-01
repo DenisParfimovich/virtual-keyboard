@@ -3,25 +3,39 @@ let keys = [49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 81, 87, 69, 82, 84, 89, 85, 
 
 
 let keyboard = document.createElement('div')
+let input = document.createElement('input')
+let instruction = document.createElement('p')
 keyboard.className = 'keyboard'
+input.className = 'input'
+instruction.className = 'instruction'
+instruction.innerHTML = 'Language switching is carried out using a keyboard shortcut alt+shift'
+document.body.append(instruction)
+document.body.append(input)
 document.body.append(keyboard)
 
 function init (){
-  let initTags = '<div class="keyboard__key keyboard__key_active">`</div>'
+  let initTags = '<div class="keyboard__key">`</div>'
   for (let i = 0; i < keys.length; i++){
     if (i==10){
-      initTags = initTags + '<div class="keyboard__key keyboard__key_active">-</div><div class="keyboard__key keyboard__key_active">=</div><div class="keyboard__backspace keyboard__backspace_active">backspace</div><div class="keyboard__tab keyboard__tab_active">tab</div>'
+      initTags = initTags + '<div class="keyboard__key">-</div><div class="keyboard__key">=</div><div class="keyboard__backspace">backspace</div><div class="keyboard__tab">tab</div>'
     }
     if (i==20){
-      initTags = initTags + '<div class="keyboard__key keyboard__key_active">[</div><div class="keyboard__key keyboard__key_active">]</div><div class="keyboard__back-slash keyboard__back-slash_active">&#92</div><div class="keyboard__caps keyboard__caps_active">caps lock</div>'
+      initTags = initTags + '<div class="keyboard__key">[</div><div class="keyboard__key">]</div><div class="keyboard__back-slash">&#92</div><div class="keyboard__caps">caps lock</div>'
     }
     if (i==29){
-      initTags = initTags + '<div class="keyboard__key keyboard__key_active">;</div><div class="keyboard__key keyboard__key_active">&#39</div><div class="keyboard__enter keyboard__enter_active">enter</div><div class="keyboard__left-shift keyboard__left-shift_active">shift</div>'
+      initTags = initTags + '<div class="keyboard__key">;</div><div class="keyboard__key">&#39</div><div class="keyboard__enter">enter</div><div class="keyboard__left-shift">shift</div>'
     }
     initTags = initTags + '<div class="keyboard__key keyboard__key_active">'+String.fromCharCode(keys[i])+'</div>'
   }
-  initTags = initTags + '<div class="keyboard__key keyboard__key_active">,</div><div class="keyboard__key keyboard__key_active">.</div><div class="keyboard__key keyboard__key_active">/</div><div class="keyboard__right-shift keyboard__right-shift_active">shift</div><div class="keyboard__left-ctrl keyboard__left-ctrl_active">ctrl</div><div class="keyboard__win keyboard__win_active">win</div><div class="keyboard__left-alt keyboard__left-alt_active">alt</div><div class="keyboard__space keyboard__space_active"></div><div class="keyboard__right-alt keyboard__right-alt_active">alt</div><div class="keyboard__right-ctrl keyboard__right-ctrl_active">ctrl</div><div class="keyboard__left keyboard__left_active">left</div><div class="keyboard__up keyboard__up_active">up</div><div class="keyboard__down keyboard__down_active">down</div><div class="keyboard__right keyboard__right_active">right</div>'
+  initTags = initTags + '<div class="keyboard__key">,</div><div class="keyboard__key">.</div><div class="keyboard__key">/</div><div class="keyboard__right-shift">shift</div><div class="keyboard__left-ctrl">ctrl</div><div class="keyboard__win">win</div><div class="keyboard__left-alt">alt</div><div class="keyboard__space"></div><div class="keyboard__right-alt">alt</div><div class="keyboard__right-ctrl">ctrl</div><div class="keyboard__left">left</div><div class="keyboard__up">up</div><div class="keyboard__down">down</div><div class="keyboard__right">right</div>'
   document.querySelector('.keyboard').innerHTML = initTags
 }
-
 init()
+
+let keys_arr = document.querySelectorAll('.keyboard__key')
+for (let i = 0; i<keys_arr.length; i++){
+  keys_arr[i].setAttribute('UpperCaseName', keys_arr[i].innerHTML)
+  keys_arr[i].setAttribute('LowerCaseName', keys_arr[i].innerHTML.toLowerCase())
+}
+
+console.log(keys_arr);

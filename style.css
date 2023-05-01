@@ -2,8 +2,29 @@ body {
   background: #507b74;
 }
 
+.instruction {
+  display: block;
+  width: 690px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #233330;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.input {
+  width: 690px;
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 3px solid black;
+  padding: 5px;
+}
+
 .keyboard {
-  max-width: 70%;
+  max-width: 690px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -85,3 +106,25 @@ body {
   border: solid rgb(0, 0, 0);
   margin: 2px;
 }
+
+.keyboard__key_active,
+.keyboard__left-ctrl_active,
+.keyboard__win_active,
+.keyboard__left-alt_active,
+.keyboard__right-ctrl_active,
+.keyboard__right-alt_active,
+.keyboard__left_active,
+.keyboard__up_active,
+.keyboard__down_active,
+.keyboard__right_active,
+.keyboard__backspace_active,
+.keyboard__tab_active,
+.keyboard__back-slash_active,
+.keyboard__caps_active,
+.keyboard__enter_active,
+.keyboard__left-shift_active,
+.keyboard__right-shift_active,
+.keyboard__space_active {
+  background: #507b74;
+}
+
