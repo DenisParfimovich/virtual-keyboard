@@ -10,7 +10,7 @@ input.className = 'input'
 input.setAttribute('type', 'text')
 
 instruction.className = 'instruction'
-instruction.innerHTML = 'Language switching is carried out using a keyboard shortcut alt+shift'
+instruction.innerHTML = 'Language switching is carried out using a keyboard shortcut alt+shift. The application is implemented for Windows OS'
 document.body.append(instruction)
 document.body.append(input)
 document.body.append(keyboard)
@@ -146,3 +146,92 @@ window.addEventListener('keyup', (e)=>{
   }
 
 })
+
+let innerText = input.value
+keyboard.addEventListener('click', (event)=>{
+  if (event.target.className === 'keyboard__key'){
+    event.target.classList.add('keyboard__key_active')
+    if (leftShift.classList.contains('keyboard__left-shift_active') || rightShift.classList.contains('keyboard__right-shift_active') || caps.classList.contains('keyboard__caps_active')){
+      innerText = input.value
+      innerText = innerText + event.target.innerHTML.toUpperCase()
+      input.value = innerText
+    } else {
+      innerText = input.value
+      innerText = innerText + event.target.innerHTML.toLowerCase()
+      input.value = innerText
+    }
+  } else if (event.target.className === 'keyboard__left-alt'){
+    event.target.classList.add('keyboard__left-alt_active')
+  } else if (event.target.className === 'keyboard__right-alt'){
+    event.target.classList.add('keyboard__right-alt_active')
+  } else if (event.target.className === 'keyboard__win'){
+    event.target.classList.add('keyboard__win_active')
+  } else if (event.target.className === 'keyboard__backspace'){
+    event.target.classList.add('keyboard__backspace_active')
+    innerText = input.value
+    innerText = innerText.slice(0, -1)
+    input.value = innerText
+  } else if (event.target.className === 'keyboard__tab'){
+    event.target.classList.add('keyboard__tab_active')
+    innerText = input.value
+    innerText = innerText + '    '
+    input.value = innerText
+  } else if (event.target.className === 'keyboard__back-slash'){
+    event.target.classList.add('keyboard__back-slash_active')
+    innerText = input.value
+    innerText = innerText + String.fromCharCode(92)
+    input.value = innerText
+  } 
+  else if (event.target.classList.contains('keyboard__caps')){
+    event.target.classList.toggle('keyboard__caps_active')
+  } 
+  else if (event.target.className === 'keyboard__enter'){
+    event.target.classList.add('keyboard__enter_active')
+    innerText = input.value
+    innerText = innerText + '\n'
+    input.value = innerText
+  } 
+  else if (event.target.classList.contains('keyboard__left-shift')){    
+    event.target.classList.toggle('keyboard__left-shift_active')
+  } 
+  else if (event.target.classList.contains('keyboard__right-shift')){
+    event.target.classList.toggle('keyboard__right-shift_active')
+  } 
+  else if (event.target.className === 'keyboard__left-ctrl'){
+    event.target.classList.add('keyboard__left-ctrl_active')
+  } else if (event.target.className === 'keyboard__right-ctrl'){
+    event.target.classList.add('keyboard__right-ctrl_active')
+  } else if (event.target.className === 'keyboard__up'){
+    event.target.classList.add('keyboard__up_active')
+  } else if (event.target.className === 'keyboard__down'){
+    event.target.classList.add('keyboard__down_active')
+  } else if (event.target.className === 'keyboard__left'){
+    event.target.classList.add('keyboard__left_active')
+  } else if (event.target.className === 'keyboard__right'){
+    event.target.classList.add('keyboard__right_active')
+  } else if (event.target.className === 'keyboard__space'){
+    event.target.classList.add('keyboard__space_active')
+  }
+  setTimeout(()=>{
+    event.target.classList.remove('keyboard__key_active')
+    event.target.classList.remove('keyboard__left-alt_active')
+    event.target.classList.remove('keyboard__right-alt_active')
+    event.target.classList.remove('keyboard__win_active')
+    event.target.classList.remove('keyboard__backspace_active')
+    event.target.classList.remove('keyboard__tab_active')
+    event.target.classList.remove('keyboard__back-slash_active')
+
+    event.target.classList.remove('keyboard__enter_active')
+
+    event.target.classList.remove('keyboard__left-ctrl_active')
+    event.target.classList.remove('keyboard__right-ctrl_active')
+    event.target.classList.remove('keyboard__up_active')
+    event.target.classList.remove('keyboard__down_active')
+    event.target.classList.remove('keyboard__left_active')
+    event.target.classList.remove('keyboard__right_active')
+    event.target.classList.remove('keyboard__space_active')
+  }, 100)
+
+  console.log(event.target);
+})
+
