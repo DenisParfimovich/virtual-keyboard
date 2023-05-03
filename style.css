@@ -1,0 +1,150 @@
+body {
+  background: #507b74;
+}
+
+.instruction {
+  display: block;
+  width: 690px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #233330;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.show-lang {
+  display: block;
+  width: 690px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.pull {
+  display: block;
+  width: 690px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.input {
+  width: 690px;
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 3px solid black;
+  padding: 5px;
+}
+
+.keyboard {
+  max-width: 690px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #84bbb2;
+  margin: 0 auto;
+  border: 3px solid black;
+  padding: 5px;
+}
+
+.keyboard__key,
+.keyboard__left-ctrl,
+.keyboard__win,
+.keyboard__left-alt,
+.keyboard__right-ctrl,
+.keyboard__right-alt,
+.keyboard__left,
+.keyboard__up,
+.keyboard__down,
+.keyboard__right {
+  box-sizing: border-box;
+  width: 6.2%;
+  height: 39px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__backspace {
+  box-sizing: border-box;
+  width: 11.1%;
+  height: 39px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__tab,
+.keyboard__back-slash {
+  box-sizing: border-box;
+  width: 8.6%;
+  height: 39px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__caps {
+  box-sizing: border-box;
+  width: 11.1%;
+  height: 39px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__enter {
+  box-sizing: border-box;
+  width: 13%;
+  height: 39px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__left-shift {
+  box-sizing: border-box;
+  width: 13.6%;
+  height: 39px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+.keyboard__right-shift {
+  box-sizing: border-box;
+  width: 17.2%;
+  height: 39px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__space {
+  box-sizing: border-box;
+  width: 38%;
+  height: 39px;
+  border: solid rgb(0, 0, 0);
+  margin: 2px;
+}
+
+.keyboard__key_active,
+.keyboard__left-ctrl_active,
+.keyboard__win_active,
+.keyboard__left-alt_active,
+.keyboard__right-ctrl_active,
+.keyboard__right-alt_active,
+.keyboard__left_active,
+.keyboard__up_active,
+.keyboard__down_active,
+.keyboard__right_active,
+.keyboard__backspace_active,
+.keyboard__tab_active,
+.keyboard__back-slash_active,
+.keyboard__caps_active,
+.keyboard__enter_active,
+.keyboard__left-shift_active,
+.keyboard__right-shift_active,
+.keyboard__space_active {
+  background: #507b74;
+}
+
